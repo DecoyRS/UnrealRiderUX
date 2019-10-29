@@ -124,6 +124,8 @@ protected:
 	virtual void SetupPlayerInputComponent(UInputComponent* InputComponent) override;
 	// End of APawn interface
 
+	FString text = "text";
+
 	/* 
 	 * Configures input for touchscreen devices if there is a valid touch interface for doing so 
 	 *
