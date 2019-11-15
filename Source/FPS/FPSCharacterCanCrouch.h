@@ -16,9 +16,11 @@ class FPS_API AFPSCharacterCanCrouch : public AFPSCharacter
 
 public:
 	AFPSCharacterCanCrouch();
+
+	int NumberOfCrouches = 0;
 	
 protected:
-	void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
+	void SetupPlayerInputComponent(class UInputComponent* SetupInputComponent) override;
 
 	void StartCrouch();
 	void StopCrouch();

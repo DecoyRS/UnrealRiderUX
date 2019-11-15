@@ -12,24 +12,25 @@ AFPSCharacterCanCrouch::AFPSCharacterCanCrouch():AFPSCharacter()
 	text = TEXT("Some new text");
 }
 
-void AFPSCharacterCanCrouch::SetupPlayerInputComponent(class UInputComponent* InputComponent)
+void AFPSCharacterCanCrouch::SetupPlayerInputComponent(class UInputComponent* SetupInputComponent)
 {
-    Super::SetupPlayerInputComponent(InputComponent);
+    Super::SetupPlayerInputComponent(SetupInputComponent);
 
-	check(InputComponent);
+	check(SetupInputComponent);
     
-	InputComponent->BindAction("Crouch", IE_Pressed, this, &AFPSCharacterCanCrouch::StartCrouch);
-	InputComponent->BindAction("Crouch", IE_Released, this, &AFPSCharacterCanCrouch::StopCrouch);
+	SetupInputComponent->BindAction("Crouch", IE_Pressed, this, &AFPSCharacterCanCrouch::StartCrouch);
+	SetupInputComponent->BindAction("Crouch", IE_Released, this, &AFPSCharacterCanCrouch::StopCrouch);
 }
 
 void AFPSCharacterCanCrouch::StartCrouch()
 {
-	UE_LOG(LogFPCharCanCrouch, ELogVerbosity::Display, TEXT("StartCrouch");
+	UE_LOG(LogFPCharCanCrouch, Display, TEXT("StartCrouch"));
+	NumberOfCrouches++;
 	Crouch();
 }
 
 void AFPSCharacterCanCrouch::StopCrouch()
 {
-	UE_LOG(LogFPCharCanCrouch, ELogVerbosity::Display, TEXT("StopCrouch");
+	UE_LOG(LogFPCharCanCrouch, Display, TEXT("StopCrouch"));
 	UnCrouch();
 }
