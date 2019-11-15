@@ -15,8 +15,6 @@ class FPS_API AFPSCharacterCanCrouch : public AFPSCharacter
 	GENERATED_BODY()
 
 public:
-	AFPSCharacterCanCrouch();
-
 	int NumberOfCrouches = 0;
 	
 protected:

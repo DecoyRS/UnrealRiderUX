@@ -6,12 +6,6 @@
 
 DEFINE_LOG_CATEGORY_STATIC(LogFPCharCanCrouch, Warning, All);
 
-
-AFPSCharacterCanCrouch::AFPSCharacterCanCrouch():AFPSCharacter()
-{
-	text = TEXT("Some new text");
-}
-
 void AFPSCharacterCanCrouch::SetupPlayerInputComponent(class UInputComponent* SetupInputComponent)
 {
     Super::SetupPlayerInputComponent(SetupInputComponent);
